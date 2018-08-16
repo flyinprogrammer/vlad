@@ -1,0 +1,6 @@
+- id: "object.created.success"
+  translation: "Object was successfully created."
+- id: "object.updated.success"
+  translation: "Object was successfully updated."
+- id: "object.destroyed.success"
+  translation: "Object was successfully destroyed."

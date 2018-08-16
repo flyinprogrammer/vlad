@@ -1,0 +1,11 @@
+create_table("boxes") {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("tag", "string", {})
+	t.Column("name", "string", {})
+	t.Column("short_description", "string", {})
+	t.Column("description_html", "string", {})
+	t.Column("username", "string", {})
+	t.Column("description_markdown", "string", {})
+	t.Column("private", "bool", {})
+	t.Column("downloads", "integer", {})
+}

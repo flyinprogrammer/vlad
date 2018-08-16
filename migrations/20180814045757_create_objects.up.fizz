@@ -1,0 +1,6 @@
+create_table("objects") {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("upload_path", "string", {})
+	t.Column("provider_id", "uuid", {})
+	t.ForeignKey("provider_id", {"providers": ["id"]}, {"on_delete": "cascade"})
+}

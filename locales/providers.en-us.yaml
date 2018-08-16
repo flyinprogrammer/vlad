@@ -1,0 +1,6 @@
+- id: "provider.created.success"
+  translation: "Provider was successfully created."
+- id: "provider.updated.success"
+  translation: "Provider was successfully updated."
+- id: "provider.destroyed.success"
+  translation: "Provider was successfully destroyed."

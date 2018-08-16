@@ -1,0 +1,9 @@
+create_table("providers") {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("name", "string", {})
+	t.Column("hosted", "bool", {})
+	t.Column("hosted_token", "string", {})
+	t.Column("original_url", "string", {})
+	t.Column("version_id", "uuid", {})
+	t.ForeignKey("version_id", {"versions": ["id"]}, {"on_delete": "cascade"})
+}

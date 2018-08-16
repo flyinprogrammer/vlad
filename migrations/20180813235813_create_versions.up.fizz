@@ -1,0 +1,12 @@
+create_table("versions") {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("version", "string", {})
+	t.Column("status", "string", {})
+	t.Column("description_html", "string", {})
+	t.Column("description_markdown", "string", {})
+	t.Column("number", "string", {})
+	t.Column("release_url", "string", {})
+	t.Column("revoke_url", "string", {})
+	t.Column("box_id", "uuid", {})
+	t.ForeignKey("box_id", {"boxes": ["id"]}, {"on_delete": "cascade"})
+}

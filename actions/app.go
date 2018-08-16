@@ -45,7 +45,15 @@ func App() *buffalo.App {
 		// Remove to disable this.
 		app.Use(middleware.PopTransaction(models.DB))
 
-		app.GET("/", HomeHandler)
+		app.POST("/api/v1/boxes", BoxesResource{}.Create)
+		app.POST("/api/v1/box/{username}/{name}/versions", VersionsResource{}.Create)
+		app.POST("/api/v1/box/{username}/{name}/version/{version}/providers", ProvidersResource{}.Create)
+		app.GET("/api/v1/box/{username}/{name}/version/{version}/provider/{provider}/upload", ObjectsResource{}.Create)
+		app.PUT("/v1/object/{id}", ObjectsResource{}.Upload)
+		app.PUT("/api/v1/box/{username}/{name}/version/{version}/release", VersionsResource{}.Release)
+		app.PUT("/api/v1/box/{username}/{name}/version/{version}/revoke", VersionsResource{}.Revoke)
+		app.GET("/api/v1/box/{username}/{name}", BoxesResource{}.ReadBox)
+		app.GET("/{username}/boxes/{name}/versions/{version}/providers/{provider}.box", ObjectsResource{}.FetchBox)
 
 	}
 

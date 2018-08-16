@@ -1,0 +1,6 @@
+- id: "box.created.success"
+  translation: "Box was successfully created."
+- id: "box.updated.success"
+  translation: "Box was successfully updated."
+- id: "box.destroyed.success"
+  translation: "Box was successfully destroyed."

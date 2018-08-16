@@ -1,0 +1,6 @@
+- id: "version.created.success"
+  translation: "Version was successfully created."
+- id: "version.updated.success"
+  translation: "Version was successfully updated."
+- id: "version.destroyed.success"
+  translation: "Version was successfully destroyed."
